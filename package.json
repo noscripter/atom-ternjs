@@ -12,12 +12,13 @@
   },
   "dependencies": {
     "loophole": "^1.1.0",
-    "tern": "^0.17.0",
+    "tern": "^0.21.0",
     "tern-lint": "^0.6.0",
     "underscore-plus": "^1.6.6",
-    "glob": "3",
-    "minimatch": "0.2",
-    "node-uuid": "1.4.7"
+    "glob": "5.0.15",
+    "minimatch": "3.0.2",
+    "node-uuid": "1.4.7",
+    "snyk": "^1.104.2"
   },
   "providedServices": {
     "autocomplete.provider": {
@@ -40,5 +41,10 @@
     "javascript-2015",
     "jquery",
     "tern"
-  ]
+  ],
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
